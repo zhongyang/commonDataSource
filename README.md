@@ -1,4 +1,4 @@
-v# 简化UITableViewDelegate & UITableViewDataSource
+简化UITableViewDelegate & UITableViewDataSource
 
 
 UITableView是iOS开发的过程中最常使用的一个控件，几乎在每个APP当中都有他的身影。伴随着UITableView不可缺少的必然是UITableViewDelegate和UITableViewDataSource.

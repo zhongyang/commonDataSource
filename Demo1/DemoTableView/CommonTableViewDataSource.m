@@ -108,4 +108,12 @@
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CommonSection *sectionObj = [_datas objectAtIndex:indexPath.section];
+    CommonCellObject *obj = [sectionObj.objects objectAtIndex:indexPath.row];
+    if (obj.configureAction) {
+        obj.configureAction(obj.object);
+    }
+}
+
 @end

@@ -17,6 +17,9 @@ typedef UIView* (^ConfigureSectionFooter)(void);
 typedef void (^ConfigureCell)(id cell, NSObject *object);
 #define ConfigureCell() ^void(id cell, NSObject *object)
 
+typedef void (^ConfigureCellAction)(NSObject *object);
+#define ConfigureCellAction() ^void(NSObject *object)
+
 @protocol CommonCellObject <NSObject>
 @end
 
@@ -34,6 +37,9 @@ typedef void (^ConfigureCell)(id cell, NSObject *object);
 
 //Configure elements display for cell
 @property(nonatomic, copy) ConfigureCell configureCell;
+
+//Configure action for cell
+@property(nonatomic, copy) ConfigureCellAction configureAction;
 
 @end
 

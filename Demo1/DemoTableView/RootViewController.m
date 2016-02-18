@@ -36,6 +36,10 @@
         tableCell.textLabel.text = (NSString *)object;
     };
 
+    ConfigureCellAction cellAction = ConfigureCellAction() {
+        NSLog(@"Action: %@", (NSString *)object);
+    };
+
     for (int i=0; i<2; i++) {
         __typeof__(self) __weak weakself = self;
         ConfigureSectionHeader configureHeader = ConfigureSectionHeader() {
@@ -64,6 +68,7 @@
             object.cellClass = NSStringFromClass([UITableViewCell class]);
             object.cellHeight = 60.0f;
             object.configureCell = cofigureCell;
+            object.configureAction = cellAction;
             [section.objects addObject:object];
         }
 
